@@ -43,8 +43,10 @@ def check_script():
     # More methods can be checked if required.
     expected_value = [2, 5, 7, 10, 18, 20]
     params = [5, 10, 20, 2, 7, 18]
-    if sorts.bubblesort(params) != expected_value:
-        print("The function did not return the correct result.")
+    returned_val = sorts.bubblesort(params)
+    if returned_val != expected_value:
+        print("The function did not return the correct result with params: " + str(params))
+        print("It returned: " + str(returned_val) + " instead of: " + str(expected_value))
         sys.exit(3)
 
     # If it has returned the expected value then the method has passed the test
